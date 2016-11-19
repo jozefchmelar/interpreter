@@ -18,4 +18,4 @@ app: main.c
 .PHONY:  all  
 
 %.o: %.c ${includes}
-	$(CC) -c -Wall -Iinclude $@ $<
+	$(CC) -c -Wall -Iinclude - Werror $@ $<

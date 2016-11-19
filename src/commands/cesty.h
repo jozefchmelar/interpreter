@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 
-int cesty(){
+int cesty() {
   printf("cesty:\t");
   DIR *d;
   struct dirent *dir;
@@ -15,18 +15,18 @@ int cesty(){
   {
     while ((dir = readdir(d)) != NULL)
     {
-      if(dir->d_name[0]!='.')
+      if (dir->d_name[0] != '.')
       {
-        x= lstat(dir->d_name,&buf);
-        if(S_ISLNK(buf.st_mode)||S_ISDIR(buf.st_mode))
-            {
-              printf("%s ",dir->d_name);
-            }
+        x = lstat(dir->d_name, &buf);
+        if (S_ISLNK(buf.st_mode) || S_ISDIR(buf.st_mode))
+        {
+          printf("%s ", dir->d_name);
+        }
       }
     }
-     printf("\n");
+    printf("\n");
     closedir(d);
-    return(0);
+    return (0);
   } else
-    return(1);  
+    return (1);
 }
