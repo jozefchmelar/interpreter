@@ -8,26 +8,28 @@
 
 int prezri()
 {
-  DIR *d;
-  struct dirent *dir;  
+    printf("prezri:\t");
+    DIR *d;
+  struct dirent *dir;
   struct stat buf;
-  d = opendir(".");
   int x;
-  int pocet_veci=0;
+  d = opendir(".");
   if (d)
   {
     while ((dir = readdir(d)) != NULL)
     {
-      if(dir->d_name[0]!='.' && ! S_ISLNK(buf.st_mode) && ! S_ISDIR(buf.st_mode)){
-       x= lstat(dir->d_name,&buf);        
-              printf("%s ",dir->d_name);   
-              pocet_veci++;        
+      if(dir->d_name[0]!='.')
+      {
+        x= lstat(dir->d_name,&buf);
+        if(S_ISREG(buf.st_mode))
+            {
+              printf("%s ",dir->d_name);
+            }
       }
     }
-    if(pocet_veci==0){
-      printf("nothing\n");
-    }
+     printf("\n");
     closedir(d);
-  }
-  return(1);
+    return(0);
+  } else
+    return(1);  
 }

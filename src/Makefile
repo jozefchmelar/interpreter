@@ -1,15 +1,21 @@
-OUTPUTS = main
+OUTPUTS = main 
 CC = gcc
-all: $(OUTPUTS)
+includes = $(wildcard commands/*.h) main
 
-app: main.c commands/prezri.h
+
+
+all: clean $(OUTPUTS)
+depend: .depend
 
 clean:
+	rm -f main
 	rm -f $(OUTPUTS)
 	rm -f -r *.o
-	rm make
+app: main.c 
 
-.PHONY: all clean
 
-%.o: %.c 
-	$(CC) -c  $@ $<
+ 
+.PHONY:  all  
+
+%.o: %.c ${includes}
+	$(CC) -c -Wall -Iinclude $@ $<

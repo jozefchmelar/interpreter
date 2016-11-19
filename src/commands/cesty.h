@@ -5,10 +5,10 @@
 #include <string.h>
 
 int cesty(){
-
+  printf("cesty:\t");
   DIR *d;
   struct dirent *dir;
-	struct stat buf;
+  struct stat buf;
   int x;
   d = opendir(".");
   if (d)
@@ -18,7 +18,7 @@ int cesty(){
       if(dir->d_name[0]!='.')
       {
         x= lstat(dir->d_name,&buf);
-        if(S_ISLNK(buf.st_mode))
+        if(S_ISLNK(buf.st_mode)||S_ISDIR(buf.st_mode))
             {
               printf("%s ",dir->d_name);
             }
@@ -28,6 +28,5 @@ int cesty(){
     closedir(d);
     return(0);
   } else
-    return(1);
-  
+    return(1);  
 }
