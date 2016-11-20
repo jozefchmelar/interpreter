@@ -10,20 +10,17 @@ int prezri()
 {
 
   //vykonaj proces.
+  printf("prezri:\t");
   DIR *d;
   struct dirent *dir;
   struct stat buf;
   int x;
   d = opendir(".");
-  if (d)
-  {
-    while ((dir = readdir(d)) != NULL)
-    {
-      if (dir->d_name[0] != '.')
-      {
+  if (d) {
+    while ((dir = readdir(d)) != NULL) {
+      if (dir->d_name[0] != '.') {
         x = lstat(dir->d_name, &buf);
-        if (S_ISREG(buf.st_mode))
-        {
+        if (S_ISREG(buf.st_mode)) {
           printf("%s ", dir->d_name);
         }
       }
@@ -34,4 +31,3 @@ int prezri()
   } else
     return 1;
 }
-

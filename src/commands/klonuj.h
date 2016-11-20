@@ -8,7 +8,8 @@
 #include "settings.h"
 #include "cp.h"
 
-int klonuj(char *pth) {
+int klonuj(const  char *pth)
+{
 
   char path[256];
   char buf[1024];
@@ -26,9 +27,9 @@ int klonuj(char *pth) {
   lstat(fullpath, &bufstat);
   if (!S_ISDIR(bufstat.st_mode)) {
     char newfname[1024];
-    strcpy(newfname, VAK_PATH );
+    strcpy(newfname, VAK_PATH);
     strcat(newfname, path);
-   
-    return  cp(fullpath, newfname);
+
+    return cp(fullpath, newfname);
   }
 }

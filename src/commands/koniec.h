@@ -2,8 +2,9 @@
 
 
 
-int  koniec() {
-	printf("\n----\nKONIEC\n----\n");
-	
-	return 0;
+int koniec()
+{
+  printf("\n\n----\nKONIEC\n----\n");
+
+  return 0;
 }

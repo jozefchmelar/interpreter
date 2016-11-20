@@ -7,17 +7,18 @@
 #include <string.h>
 #include "settings.h"
 
-int poloz(char *pth) {
-  printf("poloz:\t %s\n",pth);
+int poloz(const  char *pth)
+{
+  printf("poloz:\t %s\n", pth);
   char vakpath[1024];
-  strcpy(vakpath,VAK_PATH);
-  strcat(vakpath,pth);
+  strcpy(vakpath, VAK_PATH);
+  strcat(vakpath, pth);
   char cwd[1024];
   getcwd(cwd, sizeof(cwd));
-  strcat(cwd,pth);
+  strcat(cwd,"/");
   
-  return cp(vakpath,cwd);
-
-
-
+  strcat(cwd, pth);
+// int cp(const char *source, const char *destination)
+  printf("source%s\ndesti%s\n",vakpath,cwd );
+  return cp(vakpath, cwd);
 }

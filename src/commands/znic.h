@@ -2,7 +2,8 @@
 #include "settings.h"
 #include <stdio.h>
 
-int znic (char *predmet) {
+int znic(const  char *predmet)
+{
   char buf[1024];
   char cwd[1024];
   char zahodit[1024];
@@ -19,11 +20,11 @@ int znic (char *predmet) {
 
   lstat(fullpath, &bufstat);
   if (S_ISREG(bufstat.st_mode)) {
-     if ( unlink(fullpath) != 0) {
+    if (unlink(fullpath) != 0) {
       fprintf(stderr, "nemozem vymazat");
     }
     return 0;
 
-  } 
+  }
   return -1;
 }

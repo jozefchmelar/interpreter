@@ -8,11 +8,12 @@
 #include "settings.h"
 
 
-int zober(char *predmet) {
-	
-		printf("zober:\t%s", predmet );
-		printf("\n\t" );
-		klonuj(predmet);
-		printf("\t");
-		return znic(predmet);
+int zober(const  char *predmet)
+{
+
+  printf("zober:\t%s", predmet);
+  printf("\n\t");
+  klonuj(predmet);
+  printf("\t");
+  return znic(predmet);
 }
