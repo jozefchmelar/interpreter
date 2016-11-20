@@ -1,5 +1,6 @@
 #include <dirent.h>
 #include <stdio.h>
+#include <sys/wait.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -7,7 +8,8 @@
 
 int prezri()
 {
-  printf("prezri:\t");
+
+  //vykonaj proces.
   DIR *d;
   struct dirent *dir;
   struct stat buf;
@@ -28,7 +30,8 @@ int prezri()
     }
     printf("\n");
     closedir(d);
-    return (0);
+    return 0;
   } else
-    return (1);
+    return 1;
 }
+

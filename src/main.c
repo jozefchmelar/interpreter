@@ -11,21 +11,21 @@
 #include "commands/preskumaj.h"
 #include "commands/obsahvaku.h"
 #include "commands/zober.h"
+#include "commands/koniec.h"
 
 int main(int argc , const char* argv[] )
 {
+	printf("\n----\nSTART\n----\n\n");
 
 	//	while(i != argc)
 	//	{
 	// mode r w execute user.
 	mkdir("/tmp/VAK/", S_IRWXU );
-	cesty();
+	chod("nemocnica");
 	prezri();
-
-	klonuj("znacka");
-	obsahvaku();
-
-
+	preskumaj("liek");
+	koniec();
+	//TODO make every command execute in separate thread
 	return 0;
 }
 

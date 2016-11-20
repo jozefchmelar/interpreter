@@ -1,5 +1,7 @@
 #include <sys/stat.h>
 #include "settings.h"
+#include <stdio.h>
+
 int znic (char *predmet) {
   char buf[1024];
   char cwd[1024];
@@ -20,6 +22,6 @@ int znic (char *predmet) {
   if (S_ISREG(bufstat.st_mode)) {
     buf[len] = '\0';
     return unlink(fullpath);
-  }
+  } 
   return -1;
 }

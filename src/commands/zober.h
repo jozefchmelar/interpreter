@@ -7,11 +7,12 @@
 #include <string.h>
 #include "settings.h"
 
+
 int zober(char *predmet) {
-	printf("zober:\t%s",predmet );
-	printf("\n\t" );
-    klonuj(predmet);
-	printf("\t");    
-    znic(predmet);
-    return 0;
-  }
+	
+		printf("zober:\t%s", predmet );
+		printf("\n\t" );
+		klonuj(predmet);
+		printf("\t");
+		return znic(predmet);
+}

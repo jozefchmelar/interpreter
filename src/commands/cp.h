@@ -1,9 +1,13 @@
 #include <sys/sendfile.h>
 #include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include <stdio.h>
 #include <stdlib.h>
 int cp(const char* source, const char* destination)
 {
+
+
     int input, output;
     if ((input = open(source, O_RDONLY)) == -1)
     {
@@ -18,7 +22,6 @@ int cp(const char* source, const char* destination)
     struct stat fileinfo = {0};
     fstat(input, &fileinfo);
     int result = sendfile(output, input, &bytesCopied, fileinfo.st_size);
-
     close(input);
     close(output);
     //set permisions

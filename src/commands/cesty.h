@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/wait.h>
+
 #include <unistd.h>
 #include <string.h>
 
@@ -26,7 +28,7 @@ int cesty() {
     }
     printf("\n");
     closedir(d);
-    return (0);
+    return 0;
   } else
     return (1);
 }

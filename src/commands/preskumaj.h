@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int preskumaj(char *predmet) {
-    printf("skumaj:\t%s\n\t", predmet );
+    printf("skumaj:\t%s\n------------\n", predmet );
     FILE *f;
     char c;
     f = fopen(predmet, "rt");
@@ -10,4 +10,6 @@ int preskumaj(char *predmet) {
     while ((c = fgetc(f)) != EOF) {
         printf("%c", c);
     }
+    printf("------------\n");
+    return 0;
 }

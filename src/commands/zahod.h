@@ -1,6 +1,8 @@
 #include <sys/stat.h>
 #include "settings.h"
 int zahod(char *predmet) {
+
+
 	char buf[1024];
 	char zahodit[1024];
 	char fullpath[1024];
@@ -19,6 +21,8 @@ int zahod(char *predmet) {
 	if (S_ISREG(bufstat.st_mode)) {
 		buf[len] = '\0';
 		return unlink(fullpath);
+	} else {
+		return 1;
 	}
-	return -1;
+	return 0;
 }
