@@ -12,6 +12,7 @@
 #include "commands/obsahvaku.h"
 #include "commands/zober.h"
 #include "commands/koniec.h"
+#include "commands/hmotnostvaku.h"
 
 int main(int argc , const char* argv[] )
 {
@@ -23,7 +24,15 @@ int main(int argc , const char* argv[] )
 	mkdir("/tmp/VAK/", S_IRWXU );
 	chod("nemocnica");
 	prezri();
-	preskumaj("liek");
+	klonuj("liek");
+	hmotnostvaku();
+	zahod("liek");
+	hmotnostvaku();
+	prezri();
+	znic("liek");
+	prezri();
+	
+
 	koniec();
 	//TODO make every command execute in separate thread
 	return 0;
