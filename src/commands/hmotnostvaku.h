@@ -10,8 +10,10 @@
 int hmotnostvaku()
 {
 
-  //vykonaj proces.
-
+//save dir location
+  char pwd[1024]; 
+  getcwd(pwd, sizeof(pwd));
+//change dir.
   chdir(VAK_PATH);
   DIR *d;
   struct dirent *dir;
@@ -34,7 +36,7 @@ int hmotnostvaku()
     }
     printf("hmotnost vaku:\t %ldg\n",hmot_vaku);
     closedir(d);
-    return 0;
+    return chdir(pwd);
   } else
     return 1;
 }

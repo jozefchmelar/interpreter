@@ -18,10 +18,12 @@ int znic (char *predmet) {
   strcat(fullpath, zahodit);
 
   lstat(fullpath, &bufstat);
-
   if (S_ISREG(bufstat.st_mode)) {
-    buf[len] = '\0';
-    return unlink(fullpath);
+     if ( unlink(fullpath) != 0) {
+      fprintf(stderr, "nemozem vymazat");
+    }
+    return 0;
+
   } 
   return -1;
 }

@@ -24,11 +24,11 @@ int klonuj(char *pth) {
   strcat(fullpath, "/");
   strcat(fullpath, path);
   lstat(fullpath, &bufstat);
-  if (S_ISREG(bufstat.st_mode)) {
+  if (!S_ISDIR(bufstat.st_mode)) {
     char newfname[1024];
     strcpy(newfname, VAK_PATH );
     strcat(newfname, path);
-    cp(fullpath, newfname);
-    return 0;
+   
+    return  cp(fullpath, newfname);
   }
 }

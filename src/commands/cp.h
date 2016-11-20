@@ -7,7 +7,6 @@
 int cp(const char* source, const char* destination)
 {
 
-
     int input, output;
     if ((input = open(source, O_RDONLY)) == -1)
     {

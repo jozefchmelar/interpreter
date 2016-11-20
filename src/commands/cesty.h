@@ -32,3 +32,12 @@ int cesty() {
   } else
     return (1);
 }
+
+ int  kdesom(){
+   char cwd[1024];
+   
+    //create path
+    getcwd(cwd, sizeof(cwd));
+    printf("\tcwd\t%s\n",cwd );
+    return 0;
+}
