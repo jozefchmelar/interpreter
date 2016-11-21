@@ -9,8 +9,7 @@ int zahod(const  char *predmet)
   struct stat bufstat;
   ssize_t len;
   strcpy(zahodit, predmet);
-  printf("zahod:\t%s\n", zahodit);
-  strcpy(fullpath, VAK_PATH);
+   strcpy(fullpath, VAK_PATH);
   strcat(fullpath, "/");
   strcat(fullpath, zahodit);
   lstat(fullpath, &bufstat);

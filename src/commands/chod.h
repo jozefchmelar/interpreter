@@ -7,8 +7,6 @@
 
 int chod(const char *pth)
 {
-    printf("chod %s", pth);
-
     char path[256];
     char buf[1024];
     char cwd[1024];

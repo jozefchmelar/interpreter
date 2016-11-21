@@ -10,8 +10,7 @@ int prezri()
 {
 
   //vykonaj proces.
-  printf("prezri:\t");
-  DIR *d;
+   DIR *d;
   struct dirent *dir;
   struct stat buf;
   int x;

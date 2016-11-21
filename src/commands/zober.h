@@ -10,9 +10,8 @@
 int zober(const  char *predmet)
 {
 
-  printf("zober:\t%s", predmet);
-  printf("\n\t");
-  klonuj(predmet);
-  printf("\t");
-  return znic(predmet);
+	printf("\n\t");
+	klonuj(predmet);
+	printf("\t");
+	return znic(predmet);
 }

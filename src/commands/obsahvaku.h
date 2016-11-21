@@ -10,8 +10,7 @@ int obsahvaku()
 	char cwd[1024];
 	//create path
 	getcwd(cwd, sizeof(cwd));
-	printf("Obsah vaku:\t\n");
-	chdir(VAK_PATH);
+ 	chdir(VAK_PATH);
 	printf("\t");
 	prezri();
 	chdir(cwd);

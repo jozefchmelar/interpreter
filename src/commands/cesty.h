@@ -7,7 +7,6 @@
 
 int cesty()
 {
-  printf("cesty:\t");
   DIR *d;
   struct dirent *dir;
   struct stat buf;
@@ -34,6 +33,5 @@ int kdesom()
   char cwd[1024];
   //create path
   getcwd(cwd, sizeof(cwd));
-  printf("cwd:\t %s\n", cwd);
   return 0;
 }

@@ -11,8 +11,7 @@
 
 int poloz(const  char *pth)
 {
-  printf("poloz:\t %s\n", pth);
-  char vakpath[1024];
+   char vakpath[1024];
   strcpy(vakpath, VAK_PATH);
   strcat(vakpath, pth);
   char cwd[1024];

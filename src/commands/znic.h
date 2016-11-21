@@ -12,8 +12,7 @@ int znic(const  char *predmet)
   ssize_t len;
   strcpy(zahodit, predmet);
 
-  printf("znic:\t%s\n", zahodit);
-  getcwd(cwd, sizeof(buf));
+   getcwd(cwd, sizeof(buf));
   strcpy(fullpath, cwd);
   strcat(fullpath, "/");
   strcat(fullpath, zahodit);

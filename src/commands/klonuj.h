@@ -18,7 +18,6 @@ int klonuj(const  char *pth)
 
   getcwd(cwd, sizeof(cwd));
   strcpy(path, pth);
-  printf("klonuj:\t%s\n", path);
   strcpy(fullpath, cwd);
   strcat(fullpath, "/");
   strcat(fullpath, path);

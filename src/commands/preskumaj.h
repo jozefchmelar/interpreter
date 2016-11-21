@@ -3,7 +3,7 @@
 
 int preskumaj(const  char *predmet)
 {
-	printf("skumaj:\t%s\n------------\n", predmet);
+	printf("\n------------\n");
 	FILE *f;
 	char c;
 	f = fopen(predmet, "rt");
