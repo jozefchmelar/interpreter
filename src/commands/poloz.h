@@ -2,6 +2,8 @@
 #include <dirent.h>
 #include <stdio.h>
 #include <sys/types.h>
+#include <sys/stat.h>
+
 #include <sys/wait.h>
 #include <unistd.h>
 #include <string.h>
@@ -16,9 +18,9 @@ int poloz(const  char *pth)
   char cwd[1024];
   getcwd(cwd, sizeof(cwd));
   strcat(cwd,"/");
-  
+
   strcat(cwd, pth);
 // int cp(const char *source, const char *destination)
-  printf("source%s\ndesti%s\n",vakpath,cwd );
-  return cp(vakpath, cwd);
+    cp(vakpath, cwd);
+    return unlink(vakpath);
 }

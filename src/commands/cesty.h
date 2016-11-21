@@ -5,7 +5,8 @@
 #include <unistd.h>
 #include <string.h>
 
-int cesty() {
+int cesty()
+{
   printf("cesty:\t");
   DIR *d;
   struct dirent *dir;
@@ -33,6 +34,6 @@ int kdesom()
   char cwd[1024];
   //create path
   getcwd(cwd, sizeof(cwd));
-  printf("\tcwd\t%s\n", cwd);
+  printf("cwd:\t %s\n", cwd);
   return 0;
 }
