@@ -1,4 +1,3 @@
-
 #include <dirent.h>
 #include <stdio.h>
 #include <sys/types.h>
@@ -10,7 +9,6 @@
 
 int klonuj(const  char *pth)
 {
-
   char path[256];
   char buf[1024];
   char cwd[1024];

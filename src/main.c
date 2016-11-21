@@ -19,7 +19,7 @@
 
 int main (int argc, const char *argv[])
 {
-	mkdir ("/tmp/VAK/", S_IRWXU);	
+	mkdir ("/tmp/VAK/", S_IRWXU);
 
 	for (int i = 1; i < argc; ++i)
 	{
@@ -52,7 +52,7 @@ int main (int argc, const char *argv[])
 				cesty();
 			} else if (strcmp("obsahvaku", argv[i]) == 0 ) {
 				obsahvaku();
-			} else if (isCommand(argv[i])==0){ //this has to be here!
+			} else if (isCommand(argv[i]) == 0) { //this has to be here!
 				fprintf(stderr, "syntax error %d:  %s missing parameter\n\n", i, argv[i]);
 
 			} else {
@@ -61,8 +61,8 @@ int main (int argc, const char *argv[])
 			}
 		}
 
-	}	
-	koniec();	
+	}
+	koniec();
 
 	return 0;
 }

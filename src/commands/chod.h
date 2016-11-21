@@ -5,7 +5,6 @@
 #include <fcntl.h>
 #include <errno.h>
 
-
 int chod(const char *pth)
 {
     printf("chod %s", pth);
@@ -34,7 +33,6 @@ int chod(const char *pth)
             printf("\n");
             return 0;
         }
-
     } else {
         printf("\n");
         if (chdir(path) == 0) {
@@ -42,8 +40,6 @@ int chod(const char *pth)
         } else {
             printf("\tneexistuje\n");
             return 0;
-
         }
-
     }
 }
