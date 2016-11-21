@@ -14,3 +14,8 @@ Vytvorte jednoduchý interpreter príkazov v jazyku C, ktorý bude prechádzanie
  - preskumaj <predmet> - popise daný predmet
  - koniec - ukončí činnosť interpretra príkazov
  - Pre prezentáciu práce vytvorte svoj vlastný virtuálny svet pozostávajúci z aspoň piatich virtuálnych miestností a niekoľko predmetov.
+
+Copyright © 2000 Your Name <your@address>
+This work is free. You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To Public License, Version 2,
+as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
