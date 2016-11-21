@@ -5,10 +5,8 @@
 #include <unistd.h>
 #include "settings.h"
 
-
 int obsahvaku()
 {
-
 	char cwd[1024];
 	//create path
 	getcwd(cwd, sizeof(cwd));

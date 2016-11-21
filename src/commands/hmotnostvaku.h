@@ -9,11 +9,10 @@
 
 int hmotnostvaku()
 {
-
-//save dir location
+  //save dir location
   char pwd[1024];
   getcwd(pwd, sizeof(pwd));
-//change dir.
+  //change dir.
   chdir(VAK_PATH);
   DIR *d;
   struct dirent *dir;

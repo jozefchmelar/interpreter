@@ -4,6 +4,7 @@
 #include <sys/wait.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 int cp(const char *source, const char *destination)
 {
 
@@ -21,8 +22,8 @@ int cp(const char *source, const char *destination)
   int result = sendfile(output, input, &bytesCopied, fileinfo.st_size);
   close(input);
   close(output);
-  //set permisions
 
+  //set permisions
   char mode[] = "0644";
   int i = strtol(mode, 0, 8);
   if (chmod(destination, i) < 0) {

@@ -45,5 +45,5 @@ int chod(const char *pth)
 
         }
 
-     }
+    }
 }

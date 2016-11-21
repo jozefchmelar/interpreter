@@ -17,10 +17,10 @@ int poloz(const  char *pth)
   strcat(vakpath, pth);
   char cwd[1024];
   getcwd(cwd, sizeof(cwd));
-  strcat(cwd,"/");
+  strcat(cwd, "/");
 
   strcat(cwd, pth);
 // int cp(const char *source, const char *destination)
-    cp(vakpath, cwd);
-    return unlink(vakpath);
+  cp(vakpath, cwd);
+  return unlink(vakpath);
 }
