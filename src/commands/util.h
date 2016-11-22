@@ -47,14 +47,18 @@ char** split( char *str) {
 }
 
 void help() {
-	int c;
-	FILE *file;
-	file = fopen("help.txt", "r");
-	if (file) {
-		while ((c = getc(file)) != EOF)
-			putchar(c);
-		fclose(file);
-	}
+	 char *test =
+	#include "help.txt"
+	 ;
+	 printf("%s\n", test);
+	// int c;
+	// FILE *file;
+	// file = fopen("help.txt", "r");
+	// if (file) {
+	// 	while ((c = getc(file)) != EOF)
+	// 		putchar(c);
+	// 	fclose(file);
+	// }
 }
 
 const char *getUserName()

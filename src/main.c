@@ -20,6 +20,7 @@
 
 int main (int argc, const char *argv[])
 {
+	mkdir("/tmp/VAK/", S_IRWXU );
 
 	forever{	
 		printf("%s@FRInterpreter # ",getUserName());

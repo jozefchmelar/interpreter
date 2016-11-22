@@ -28,7 +28,6 @@ int chod(const char *pth)
             if (chdir(buf) == -1) {
                 printf("chdir! %s\n", strerror(errno));
             }
-            printf("\n");
             return 0;
         }
     } else {

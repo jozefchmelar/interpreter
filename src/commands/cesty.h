@@ -33,5 +33,6 @@ int kdesom()
   char cwd[1024];
   //create path
   getcwd(cwd, sizeof(cwd));
+  printf("%s\n", cwd);
   return 0;
 }
