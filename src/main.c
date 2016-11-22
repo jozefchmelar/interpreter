@@ -16,17 +16,13 @@
 #include "commands/hmotnostvaku.h"
 #include "commands/poloz.h"
 #include "commands/util.h"
+#define forever while(1)
 
 int main (int argc, const char *argv[])
 {
-	// char *line = NULL;
-	// size_t len = 0;
-	// ssize_t read = 0;
 
-
-
-	while (1 == 1) {
-		// read = getline(&line, &len, stdin);
+	forever{	
+		printf("%s@FRInterpreter # ",getUserName());
 		char *eof;
 		char line[1024];	
 		fgets(line, sizeof line, stdin);			
@@ -39,7 +35,6 @@ int main (int argc, const char *argv[])
 		size_t ln = strlen(command[0]) - 1;
 		if (*command[0] && command[0][ln] == '\n')
 			command[0][ln] = '\0';
-
 
 		// if command has parameter and parameter of command is not another command execute.
 		if (hasParameter(command[0]) == 0 && isCommand(command[1]) == 1) {
@@ -74,60 +69,15 @@ int main (int argc, const char *argv[])
 				cesty();
 			} else if (strcmp("obsahvaku", command[0]) == 0 ) {
 				obsahvaku();
+			}else if (strcmp("help", command[0]) == 0 ) {
+				help();
 			} else if (isCommand(command[0]) == 0) { //this has to be here!
 				fprintf(stderr, "syntax error :  %s missing parameter\n\n",  command[0]);
-
 			} else {	
 				system(origcomm);
 			}
 		}
-
 	}
-
-
-
-	// for (int i = 1; i < argc; ++i)
-	// {
-	// 	// if command has parameter and parameter of command is not another command execute.
-	// 	if (hasParameter(argv[i]) == 0 && isCommand(argv[i + 1]) == 1) {
-
-	// 		if (strcmp("chod", argv[i]) == 0 ) {
-	// 			chod(argv[++i]);
-	// 		} else if (strcmp("klonuj", argv[i]) == 0 ) {
-	// 			klonuj(argv[++i]);
-	// 		} else if (strcmp("znic", argv[i]) == 0 ) {
-	// 			znic(argv [++i]);
-	// 		} else if (strcmp("preskumaj", argv[i]) == 0 ) {
-	// 			preskumaj(argv [++i]);
-	// 		} else if (strcmp("zober", argv[i]) == 0 ) {
-	// 			zober(argv [++i]);
-	// 		} else if (strcmp("poloz", argv[i]) == 0 ) {
-	// 			poloz(argv  [++i]);
-	// 		}
-	// 	} else {
-	// 		if (strcmp("koniec", argv[i]) == 0 ) {
-	// 			koniec();
-	// 		} else if (strcmp("hmotnostvaku", argv[i]) == 0 ) {
-	// 			hmotnostvaku();
-	// 		} else if (strcmp("kdesom", argv[i]) == 0 ) {
-	// 			kdesom();
-	// 		} else if (strcmp("prezri", argv[i]) == 0 ) {
-	// 			prezri();
-	// 		} else if (strcmp("cesty", argv[i]) == 0 ) {
-	// 			cesty();
-	// 		} else if (strcmp("obsahvaku", argv[i]) == 0 ) {
-	// 			obsahvaku();
-	// 		} else if (isCommand(argv[i]) == 0) { //this has to be here!
-	// 			fprintf(stderr, "syntax error %d:  %s missing parameter\n\n", i, argv[i]);
-
-	// 		} else {
-	// 			printf("system command %s\t\n", argv[i]);
-	// 			system(argv[i]);
-	// 		}
-	// 	}
-
-	// }
-	// koniec();
 
 	return 0;
 }

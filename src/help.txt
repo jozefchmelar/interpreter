@@ -1,0 +1,14 @@
+chod			-	vojde do danej miestnosti
+zober			-	zoberie predmet z danej miestnosti
+poloz			-	uloží predmet z vaku do aktuálnej miestnosti
+obsahvaku		-	vypíše obsah vaku
+hmotnostvaku	-	vypíše súčet hmotnosti (veľkosti v bytoch) predmetov vo vaku
+prezri			-	zobrazí zoznam predmetov v aktuálnej miestnosti
+cesty			-	vypíše zoznam miestností, kam môžeme z aktuálnej miestnosti ísť
+klonuj			-	vytvorí kópiu predmetu v danej miestnosti do vaku
+zahod 			-	zahodí (odstráni) predmet z vaku
+znic			-	zničí (odstráni) predmet v danej miestnosti
+preskumaj		-	popise daný predmet
+kdesom			-	vypise kde sa nachadzame
+help			-	vypise prikazy
+koniec			-	ukončí činnosť interpretra príkazov
