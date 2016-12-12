@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include "settings.h"
 
-int obsahvaku()
+static inline int obsahvaku()
 {
 	char cwd[1024];
 	//create path

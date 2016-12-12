@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <string.h>
 
-int cesty()
+static inline int cesty()
 {
   DIR *d;
   struct dirent *dir;

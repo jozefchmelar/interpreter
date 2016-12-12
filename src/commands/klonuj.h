@@ -7,7 +7,7 @@
 #include "settings.h"
 #include "cp.h"
 
-int klonuj(const  char *pth)
+static inline int klonuj(const  char *pth)
 {
   char path[256];
   char buf[1024];

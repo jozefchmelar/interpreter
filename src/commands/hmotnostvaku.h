@@ -7,7 +7,7 @@
 #include <string.h>
 #include "settings.h"
 
-int hmotnostvaku()
+static inline int hmotnostvaku()
 {
   //save dir location
   char pwd[1024];

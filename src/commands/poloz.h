@@ -9,7 +9,7 @@
 #include <string.h>
 #include "settings.h"
 
-int poloz(const  char *pth)
+static inline int poloz(const  char *pth)
 {
    char vakpath[1024];
   strcpy(vakpath, VAK_PATH);

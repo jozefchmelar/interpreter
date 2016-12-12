@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int cp(const char *source, const char *destination)
+static inline int cp(const char *source, const char *destination)
 {
 
   int input, output;

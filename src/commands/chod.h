@@ -5,7 +5,7 @@
 #include <fcntl.h>
 #include <errno.h>
 
-int chod(const char *pth)
+static inline int chod(const char *pth)
 {
     char path[256];
     char buf[1024];

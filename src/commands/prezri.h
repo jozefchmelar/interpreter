@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <string.h>
 
-int prezri()
+static inline int prezri()
 {
 
   //vykonaj proces.

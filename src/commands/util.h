@@ -2,7 +2,7 @@
 #include <pwd.h>
 
 
-int isCommand(const char* totest) {
+static inline int isCommand(const char* totest) {
 	char *commands[] = {"cesty", "chod", "hmotnostvaku", "klonuj", "koniec", "obsahvaku", "poloz", "preskumaj", "prezri", "zahod", "znic", "help","zober"};
 	int count  = sizeof(commands) / sizeof(commands[0]);
 
@@ -13,7 +13,7 @@ int isCommand(const char* totest) {
 	return 1;
 }
 
-int hasParameter(const char* totest) {
+static inline int hasParameter(const char* totest) {
 	char *commands[] = {"chod", "klonuj", "poloz", "preskumaj", "zahod", "znic", "zober"};
 	int count  = sizeof(commands) / sizeof(commands[0]);
 
@@ -25,7 +25,7 @@ int hasParameter(const char* totest) {
 }
 
 
-char** split( char *str) {
+static inline char** split( char *str) {
 	char ** res  = NULL;
 	char *  p    = strtok (str, " ");
 	int n_spaces = 0, i;
@@ -46,7 +46,7 @@ char** split( char *str) {
 	return res;
 }
 
-void help() {
+static inline void help() {
 	 char *test =
 	#include "help.txt"
 	 ;
@@ -61,7 +61,7 @@ void help() {
 	// }
 }
 
-const char *getUserName()
+static inline const char *getUserName()
 {
   uid_t uid = geteuid();
   struct passwd *pw = getpwuid(uid);
