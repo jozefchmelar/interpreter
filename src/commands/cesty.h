@@ -1,3 +1,7 @@
+/*! \file cesty.h
+\brief vypíše zoznam miestností, kam môžeme z aktuálnej miestnosti ísť
+\author Jozef Chmelar
+*/
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -5,6 +9,11 @@
 #include <unistd.h>
 #include <string.h>
 
+/*! \brief prints  folders or links that we can go to
+  function tries to open directory "d" if it's not null
+  it's going to check every single dir within folder and 
+  print name of every single directory or symbolic link 
+*/ 
 static inline int cesty()
 {
   DIR *d;
@@ -12,7 +21,9 @@ static inline int cesty()
   struct stat buf;
   int x;
   d = opendir(".");
+  //id d is not null
   if (d) {
+    //checks if folder is real folder or just symbolic link.
     while ((dir = readdir(d)) != NULL) {
       if (dir->d_name[0] != '.') {
         x = lstat(dir->d_name, &buf);
@@ -28,6 +39,8 @@ static inline int cesty()
     return (1);
 }
 
+/*! \brief prints  current working directory
+*/ 
 int kdesom()
 {
   char cwd[1024];

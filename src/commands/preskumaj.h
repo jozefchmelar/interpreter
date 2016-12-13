@@ -1,16 +1,30 @@
+/*! \file  preskumaj.h
+\brief  popise daný predmet
+\author Jozef Chmelar
+*/
 #include <stdio.h>
 #include <stdlib.h>
-
+/*! \brief prints content of file
+  
+*/ 
 static inline int preskumaj(const  char *predmet)
-{
-	printf("\n------------\n");
-	FILE *f;
-	char c;
-	f = fopen(predmet, "rt");
+{	
+		FILE *f;
+		char c;
+		// This function returns a FILE pointer. 
+		// Otherwise, NULL is returned and the global variable errno is 
+		// set to indicate the error.	
+		f = fopen(predmet, "r");
+		if(f){
 
-	while ((c = fgetc(f)) != EOF) {
-		printf("%c", c);
-	}
-	printf("------------\n");
+			while ((c = fgetc(f)) != EOF) {
+				printf("%c", c);
+			}
+		fclose(f);
+
+		}else{
+			printf("No such file\n");
+		}
+	
 	return 0;
 }

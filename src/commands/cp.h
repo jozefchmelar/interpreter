@@ -1,3 +1,7 @@
+/*! \file cp.h
+\brief skopiruje subor z path to dest.
+\author Jozef Chmelar
+*/
 #include <sys/sendfile.h>
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -5,6 +9,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+/*! \brief copy file
+  @param source path of the source file
+  @param destination path of the destination file.
+
+  copy file and set permissions.
+*/ 
 static inline int cp(const char *source, const char *destination)
 {
 

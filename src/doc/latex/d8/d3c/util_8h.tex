@@ -1,0 +1,93 @@
+\hypertarget{util_8h}{}\section{commands/util.h File Reference}
+\label{util_8h}\index{commands/util.\+h@{commands/util.\+h}}
+
+
+utility  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$pwd.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}help.\+txt\char`\"{}}\\*
+Include dependency graph for util.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{util_8h_ae506c7ed7f44df554f377a13994962ad}{is\+Command} (const char $\ast$totest)
+\begin{DoxyCompactList}\small\item\em checks if string is command compares an array of commands to testing string \end{DoxyCompactList}\item 
+static int \hyperlink{util_8h_ae6a26125aa2af5d554d5364e4300bc44}{has\+Parameter} (const char $\ast$totest)
+\begin{DoxyCompactList}\small\item\em checks if command has paramter \end{DoxyCompactList}\item 
+static char $\ast$$\ast$ \hyperlink{util_8h_a007bf8b9949a8a22f4fb91f52230ccfd}{split} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em splits string \href{http://stackoverflow.com/questions/18429273/in-c-how-to-split-a-string-on-n-into-lines}{\tt http\+://stackoverflow.\+com/questions/18429273/in-\/c-\/how-\/to-\/split-\/a-\/string-\/on-\/n-\/into-\/lines} \end{DoxyCompactList}\item 
+static void \hyperlink{util_8h_ad8c51bbfda76f19f61c727838e6eee30}{help} ()
+\begin{DoxyCompactList}\small\item\em prints help file. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{util_8h_aefe58297b3e86b09adfd481187b6c4cb}{get\+User\+Name} ()
+\begin{DoxyCompactList}\small\item\em returns username \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+utility 
+
+\begin{DoxyAuthor}{Author}
+Jozef Chmelar 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{util.\+h@{util.\+h}!get\+User\+Name@{get\+User\+Name}}
+\index{get\+User\+Name@{get\+User\+Name}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{get\+User\+Name()}{getUserName()}}]{\setlength{\rightskip}{0pt plus 5cm}static const char$\ast$ get\+User\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{util_8h_aefe58297b3e86b09adfd481187b6c4cb}{}\label{util_8h_aefe58297b3e86b09adfd481187b6c4cb}
+
+
+returns username 
+
+\index{util.\+h@{util.\+h}!has\+Parameter@{has\+Parameter}}
+\index{has\+Parameter@{has\+Parameter}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{has\+Parameter(const char $\ast$totest)}{hasParameter(const char *totest)}}]{\setlength{\rightskip}{0pt plus 5cm}static int has\+Parameter (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{totest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{util_8h_ae6a26125aa2af5d554d5364e4300bc44}{}\label{util_8h_ae6a26125aa2af5d554d5364e4300bc44}
+
+
+checks if command has paramter 
+
+\index{util.\+h@{util.\+h}!help@{help}}
+\index{help@{help}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{help()}{help()}}]{\setlength{\rightskip}{0pt plus 5cm}static void help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{util_8h_ad8c51bbfda76f19f61c727838e6eee30}{}\label{util_8h_ad8c51bbfda76f19f61c727838e6eee30}
+
+
+prints help file. 
+
+\index{util.\+h@{util.\+h}!is\+Command@{is\+Command}}
+\index{is\+Command@{is\+Command}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{is\+Command(const char $\ast$totest)}{isCommand(const char *totest)}}]{\setlength{\rightskip}{0pt plus 5cm}static int is\+Command (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{totest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{util_8h_ae506c7ed7f44df554f377a13994962ad}{}\label{util_8h_ae506c7ed7f44df554f377a13994962ad}
+
+
+checks if string is command compares an array of commands to testing string 
+
+\index{util.\+h@{util.\+h}!split@{split}}
+\index{split@{split}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{split(char $\ast$str)}{split(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$$\ast$ split (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{util_8h_a007bf8b9949a8a22f4fb91f52230ccfd}{}\label{util_8h_a007bf8b9949a8a22f4fb91f52230ccfd}
+
+
+splits string \href{http://stackoverflow.com/questions/18429273/in-c-how-to-split-a-string-on-n-into-lines}{\tt http\+://stackoverflow.\+com/questions/18429273/in-\/c-\/how-\/to-\/split-\/a-\/string-\/on-\/n-\/into-\/lines} 
+

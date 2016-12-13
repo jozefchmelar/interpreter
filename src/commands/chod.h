@@ -1,3 +1,7 @@
+/*! \file chod.h
+\brief vojde do danej miestnosti 
+\author Jozef Chmelar
+*/
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -5,6 +9,11 @@
 #include <fcntl.h>
 #include <errno.h>
 
+/*! \brief Function to enter into dir or link
+  Function checks if directory we want to enter to 
+  exits and if so it checks wheter it's a link 
+  
+*/ 
 static inline int chod(const char *pth)
 {
     char path[256];
@@ -31,7 +40,6 @@ static inline int chod(const char *pth)
             return 0;
         }
     } else {
-        printf("\n");
         if (chdir(path) == 0) {
             return 0;
         } else {

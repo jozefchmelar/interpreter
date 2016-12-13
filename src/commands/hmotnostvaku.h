@@ -1,3 +1,8 @@
+/*! \file hmotnostvaku.h
+\brief vypíše súčet hmotnosti (veľkosti v bytoch) predmetov vo vaku
+\author Jozef Chmelar
+*/
+
 #include <dirent.h>
 #include <stdio.h>
 #include <sys/wait.h>
@@ -5,15 +10,17 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <string.h>
-#include "settings.h"
 
+/*! \brief number of bytes in VAK path
+  returns sum of bytes in VAK folder.
+*/ 
 static inline int hmotnostvaku()
 {
   //save dir location
   char pwd[1024];
   getcwd(pwd, sizeof(pwd));
   //change dir.
-  chdir(VAK_PATH);
+  chdir(getVakPath());
   DIR *d;
   struct dirent *dir;
   struct stat buf;

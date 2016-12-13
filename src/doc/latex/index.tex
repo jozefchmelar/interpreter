@@ -1,0 +1,17 @@
+\begin{DoxyAuthor}{Author}
+Jozef Chmelar
+\end{DoxyAuthor}
+Vytvorte jednoduchý interpreter príkazov v jazyku C, ktorý bude prechádzanie súborovým systémom prezentovať formou putovania hráča virtuálnym svetom. Jednotlivé adresáre predstavujú miestnosti, do ktorých sa dá vstúpiť a obsahujú predmety, reprezentované súbormi. Ako dvere na prechod medzi miestnosťami slúžia symbolické linky\mbox{[}2\mbox{]}, ktoré odkazujú na iné adresáre. Predmety (súbory ktorých veľkosť v bytoch vyjadruje hmotnosť v gramoch) sa dajú ukladať do vaku (s obmedzenou nosnosťou) a neskôr odkladať v iných miestnostiach. Príkazy, ktoré váš interpreter príkazov nepozná, spracuje pomocou zavolania interpretera príkazov bash. Zoznam príkazov\+: \begin{DoxyVerb}chod - vojde do danej miestnosti
+zober - zoberie predmet z danej miestnosti
+poloz - uloží predmet z vaku do aktuálnej miestnosti
+obsahvaku - vypíše obsah vaku
+hmotnostvaku - vypíše súčet hmotnosti (veľkosti v bytoch) predmetov vo vaku
+prezri - zobrazí zoznam predmetov v aktuálnej miestnosti
+cesty - vypíše zoznam miestností, kam môžeme z aktuálnej miestnosti ísť
+klonuj - vytvorí kópiu predmetu v danej miestnosti do vaku
+zahod - zahodí (odstráni) predmet z vaku
+znic - zničí (odstráni) predmet v danej miestnosti
+preskumaj - popise daný predmet
+koniec - ukončí činnosť interpretra príkazov
+Pre prezentáciu práce vytvorte svoj vlastný virtuálny svet pozostávajúci z aspoň piatich virtuálnych miestností a niekoľko predmetov.\end{DoxyVerb}
+ 

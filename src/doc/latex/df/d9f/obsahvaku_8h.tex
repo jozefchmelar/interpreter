@@ -1,0 +1,56 @@
+\hypertarget{obsahvaku_8h}{}\section{commands/obsahvaku.h File Reference}
+\label{obsahvaku_8h}\index{commands/obsahvaku.\+h@{commands/obsahvaku.\+h}}
+
+
+vypíše obsah vaku  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\+h$>$}\\*
+{\ttfamily \#include $<$sys/wait.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+Include dependency graph for obsahvaku.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \hyperlink{obsahvaku_8h_aa4cd2838b372a5651ff6303405132260}{get\+Vak\+Path} ()
+\begin{DoxyCompactList}\small\item\em gets V\+AK path returns path of the V\+AK folder because V\+AK is located in users folder. \end{DoxyCompactList}\item 
+static int \hyperlink{obsahvaku_8h_a35863513c6ddc878ac94c1b421c60068}{obsahvaku} ()
+\begin{DoxyCompactList}\small\item\em files in V\+AK funcion saves cwd ,enters V\+AK folder, prints every file and returns into previous dir. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+vypíše obsah vaku 
+
+\begin{DoxyAuthor}{Author}
+Jozef Chmelar 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{obsahvaku.\+h@{obsahvaku.\+h}!get\+Vak\+Path@{get\+Vak\+Path}}
+\index{get\+Vak\+Path@{get\+Vak\+Path}!obsahvaku.\+h@{obsahvaku.\+h}}
+\subsubsection[{\texorpdfstring{get\+Vak\+Path()}{getVakPath()}}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ get\+Vak\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{obsahvaku_8h_aa4cd2838b372a5651ff6303405132260}{}\label{obsahvaku_8h_aa4cd2838b372a5651ff6303405132260}
+
+
+gets V\+AK path returns path of the V\+AK folder because V\+AK is located in users folder. 
+
+\index{obsahvaku.\+h@{obsahvaku.\+h}!obsahvaku@{obsahvaku}}
+\index{obsahvaku@{obsahvaku}!obsahvaku.\+h@{obsahvaku.\+h}}
+\subsubsection[{\texorpdfstring{obsahvaku()}{obsahvaku()}}]{\setlength{\rightskip}{0pt plus 5cm}static int obsahvaku (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{obsahvaku_8h_a35863513c6ddc878ac94c1b421c60068}{}\label{obsahvaku_8h_a35863513c6ddc878ac94c1b421c60068}
+
+
+files in V\+AK funcion saves cwd ,enters V\+AK folder, prints every file and returns into previous dir. 
+

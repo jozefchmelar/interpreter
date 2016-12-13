@@ -1,0 +1,22 @@
+digraph "commands/settings.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="commands/settings.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="commands/klonuj.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/db4/klonuj_8h.html",tooltip="vytvorí kópiu predmetu v danej miestnosti do vaku "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="main.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d29/main_8c.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="commands/znic.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/ded/znic_8h.html",tooltip="zničí (odstráni) predmet v danej miestnosti "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="commands/zober.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d2e/zober_8h.html",tooltip="zoberie predmet z danej miestnosti "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="commands/hmotnostvaku.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d7a/hmotnostvaku_8h.html",tooltip="vypíše súčet hmotnosti (veľkosti v bytoch) predmetov vo vaku "];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="commands/poloz.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de4/poloz_8h.html",tooltip="uloží predmet z vaku do aktuálnej miestnosti "];
+  Node7 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

@@ -1,0 +1,57 @@
+\hypertarget{cesty_8h}{}\section{commands/cesty.h File Reference}
+\label{cesty_8h}\index{commands/cesty.\+h@{commands/cesty.\+h}}
+
+
+vypíše zoznam miestností, kam môžeme z aktuálnej miestnosti ísť  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\+h$>$}\\*
+{\ttfamily \#include $<$sys/wait.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Include dependency graph for cesty.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{cesty_8h_a53d1d4aeae88ea9a1ce0bbdf28c8241d}{cesty} ()
+\begin{DoxyCompactList}\small\item\em prints folders or links that we can go to function tries to open directory \char`\"{}d\char`\"{} if it\textquotesingle{}s not null it\textquotesingle{}s going to check every single dir within folder and print name of every single directory or symbolic link \end{DoxyCompactList}\item 
+int \hyperlink{cesty_8h_a26f05e8835b936b5b6d4491c5561a428}{kdesom} ()
+\begin{DoxyCompactList}\small\item\em prints current working directory \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+vypíše zoznam miestností, kam môžeme z aktuálnej miestnosti ísť 
+
+\begin{DoxyAuthor}{Author}
+Jozef Chmelar 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{cesty.\+h@{cesty.\+h}!cesty@{cesty}}
+\index{cesty@{cesty}!cesty.\+h@{cesty.\+h}}
+\subsubsection[{\texorpdfstring{cesty()}{cesty()}}]{\setlength{\rightskip}{0pt plus 5cm}static int cesty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{cesty_8h_a53d1d4aeae88ea9a1ce0bbdf28c8241d}{}\label{cesty_8h_a53d1d4aeae88ea9a1ce0bbdf28c8241d}
+
+
+prints folders or links that we can go to function tries to open directory \char`\"{}d\char`\"{} if it\textquotesingle{}s not null it\textquotesingle{}s going to check every single dir within folder and print name of every single directory or symbolic link 
+
+\index{cesty.\+h@{cesty.\+h}!kdesom@{kdesom}}
+\index{kdesom@{kdesom}!cesty.\+h@{cesty.\+h}}
+\subsubsection[{\texorpdfstring{kdesom()}{kdesom()}}]{\setlength{\rightskip}{0pt plus 5cm}int kdesom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{cesty_8h_a26f05e8835b936b5b6d4491c5561a428}{}\label{cesty_8h_a26f05e8835b936b5b6d4491c5561a428}
+
+
+prints current working directory 
+

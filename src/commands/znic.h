@@ -1,7 +1,12 @@
+/*! \file  znic.h
+\brief  zničí (odstráni) predmet v danej miestnosti
+\author Jozef Chmelar
+*/
 #include <sys/stat.h>
-#include "settings.h"
 #include <stdio.h>
-
+/*! \brief deletes file in cwd
+@param predmet name of the file to delete
+*/
 int znic(const  char *predmet)
 {
   char buf[1024];
@@ -12,7 +17,7 @@ int znic(const  char *predmet)
   ssize_t len;
   strcpy(zahodit, predmet);
 
-   getcwd(cwd, sizeof(buf));
+  getcwd(cwd, sizeof(buf));
   strcpy(fullpath, cwd);
   strcat(fullpath, "/");
   strcat(fullpath, zahodit);

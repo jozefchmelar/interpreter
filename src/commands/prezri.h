@@ -1,3 +1,7 @@
+/*! \file  prezri.h
+\brief  zobrazí zoznam predmetov v aktuálnej miestnosti
+\author Jozef Chmelar
+*/
 #include <dirent.h>
 #include <stdio.h>
 #include <sys/wait.h>
@@ -5,12 +9,11 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <string.h>
-
+/*! \brief prints all dir or symbolic link names 
+*/ 
 static inline int prezri()
 {
-
-  //vykonaj proces.
-   DIR *d;
+  DIR *d;
   struct dirent *dir;
   struct stat buf;
   int x;

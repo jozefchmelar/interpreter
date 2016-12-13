@@ -1,8 +1,15 @@
+/*! \file  util.h
+\brief  utility 
+\author Jozef Chmelar
+*/
 #include <string.h>
 #include <pwd.h>
 
-
+/*! \brief checks if string is command
+	compares an array of commands to testing string
+*/
 static inline int isCommand(const char* totest) {
+	if(totest==NULL) return 0;
 	char *commands[] = {"cesty", "chod", "hmotnostvaku", "klonuj", "koniec", "obsahvaku", "poloz", "preskumaj", "prezri", "zahod", "znic", "help","zober"};
 	int count  = sizeof(commands) / sizeof(commands[0]);
 
@@ -12,7 +19,8 @@ static inline int isCommand(const char* totest) {
 	}
 	return 1;
 }
-
+/*! \brief checks if command has paramter
+*/
 static inline int hasParameter(const char* totest) {
 	char *commands[] = {"chod", "klonuj", "poloz", "preskumaj", "zahod", "znic", "zober"};
 	int count  = sizeof(commands) / sizeof(commands[0]);
@@ -24,7 +32,9 @@ static inline int hasParameter(const char* totest) {
 	return 1;
 }
 
-
+/*! \brief splits string
+http://stackoverflow.com/questions/18429273/in-c-how-to-split-a-string-on-n-into-lines
+*/
 static inline char** split( char *str) {
 	char ** res  = NULL;
 	char *  p    = strtok (str, " ");
@@ -46,29 +56,26 @@ static inline char** split( char *str) {
 	return res;
 }
 
+/*! \brief prints help file. 
+*/
 static inline void help() {
-	 char *test =
+	char *test =
 	#include "help.txt"
-	 ;
-	 printf("%s\n", test);
-	// int c;
-	// FILE *file;
-	// file = fopen("help.txt", "r");
-	// if (file) {
-	// 	while ((c = getc(file)) != EOF)
-	// 		putchar(c);
-	// 	fclose(file);
-	// }
-}
+	;
+	printf("%s\n", test);
 
+}
+/*! \brief returns username
+*/
 static inline const char *getUserName()
 {
-  uid_t uid = geteuid();
-  struct passwd *pw = getpwuid(uid);
-  if (pw)
-  {
-    return pw->pw_name;
-  }
+	uid_t uid = geteuid();
+	struct passwd *pw = getpwuid(uid);
+	if (pw)
+	{
+		return pw->pw_name;
+	}
 
-  return "";
+	return "";
 }
+

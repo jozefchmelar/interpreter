@@ -1,0 +1,53 @@
+\hypertarget{cp_8h}{}\section{commands/cp.h File Reference}
+\label{cp_8h}\index{commands/cp.\+h@{commands/cp.\+h}}
+
+
+skopiruje subor z path to dest.  
+
+
+{\ttfamily \#include $<$sys/sendfile.\+h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/wait.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for cp.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{cp_8h_a6e700daedf1c866a7d87f0c6af1a9ae7}{cp} (const char $\ast$source, const char $\ast$destination)
+\begin{DoxyCompactList}\small\item\em copy file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+skopiruje subor z path to dest. 
+
+\begin{DoxyAuthor}{Author}
+Jozef Chmelar 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{cp.\+h@{cp.\+h}!cp@{cp}}
+\index{cp@{cp}!cp.\+h@{cp.\+h}}
+\subsubsection[{\texorpdfstring{cp(const char $\ast$source, const char $\ast$destination)}{cp(const char *source, const char *destination)}}]{\setlength{\rightskip}{0pt plus 5cm}static int cp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{source, }
+\item[{const char $\ast$}]{destination}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{cp_8h_a6e700daedf1c866a7d87f0c6af1a9ae7}{}\label{cp_8h_a6e700daedf1c866a7d87f0c6af1a9ae7}
+
+
+copy file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & path of the source file \\
+\hline
+{\em destination} & path of the destination file.\\
+\hline
+\end{DoxyParams}
+copy file and set permissions. 

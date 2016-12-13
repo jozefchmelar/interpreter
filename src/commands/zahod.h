@@ -1,6 +1,12 @@
+/*! \file  zahod.h
+\brief  zahodí (odstráni) predmet z vaku
+\author Jozef Chmelar
+*/
 #include <sys/stat.h>
-#include "settings.h"
 
+/*! \brief deletes file from VAK
+@param predmet - name of the file in VAK
+*/
 int zahod(const  char *predmet)
 {
   char buf[1024];
@@ -9,8 +15,8 @@ int zahod(const  char *predmet)
   struct stat bufstat;
   ssize_t len;
   strcpy(zahodit, predmet);
-   strcpy(fullpath, VAK_PATH);
-  strcat(fullpath, "/");
+  strcpy(fullpath, getenv("HOME"));
+  strcat(fullpath, "/VAK/");
   strcat(fullpath, zahodit);
   lstat(fullpath, &bufstat);
   if (S_ISREG(bufstat.st_mode)) {
